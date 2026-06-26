@@ -71,3 +71,124 @@ body {
   background-position: right 0.75rem center;
   background-size: 16px 12px;
 }
+
+/* Bento Card Base */
+.bento-card {
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--ease-micro), transform var(--ease-micro);
+}
+.bento-card:hover {
+  border-color: rgba(255, 200, 1, 0.3);
+  transform: scale(1.01);
+}
+.bento-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--mid-gray);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.bento-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+.bento-metric {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--mid-gray);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.bento-x-icon::before, .bento-x-icon::after {
+  content: ''; position: absolute;
+  width: 12px; height: 1px; background: rgba(255,255,255,0.3);
+}
+.bento-x-icon::before { transform: rotate(45deg); }
+.bento-x-icon::after  { transform: rotate(-45deg); }
+
+/* SVG Gauge Animations */
+.gauge-ring {
+  stroke-dasharray: 283; /* 2 * pi * r (45) */
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+.is-visible .gauge-ring {
+  stroke-dashoffset: 42; /* ~85% fill */
+}
+
+.radial-ring {
+  stroke-dasharray: 220; /* pi * r (70) */
+  stroke-dashoffset: 220;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+.is-visible .radial-ring {
+  stroke-dashoffset: 66; /* ~70% fill */
+}
+
+/* Bar Chart Animation */
+.bar {
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.6s ease-out;
+}
+.is-visible .bar:nth-child(2) { transform: scaleY(1); transition-delay: 0ms; }
+.is-visible .bar:nth-child(3) { transform: scaleY(1); transition-delay: 80ms; }
+.is-visible .bar:nth-child(4) { transform: scaleY(1); transition-delay: 160ms; }
+.is-visible .bar:nth-child(5) { transform: scaleY(1); transition-delay: 240ms; }
+.is-visible .bar:nth-child(6) { transform: scaleY(1); transition-delay: 320ms; }
+.is-visible .bar:nth-child(7) { transform: scaleY(1); transition-delay: 400ms; }
+
+/* Line Chart Animation */
+.line-chart-path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+.is-visible .line-chart-path {
+  stroke-dashoffset: 0;
+}
+.line-chart-fill {
+  opacity: 0;
+  transition: opacity 1s ease-in 0.5s;
+}
+.is-visible .line-chart-fill {
+  opacity: 0.3;
+}
+
+/* Accordion */
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-dark);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+.accordion-chevron {
+  transition: transform var(--ease-micro);
+  font-size: 0.7rem;
+  color: var(--mid-gray);
+}
+.accordion-chevron.open {
+  transform: rotate(90deg);
+}
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--ease-layout);
+}
