@@ -20,7 +20,7 @@ function App() {
   useReveal();
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen text-white font-sans selection:bg-forsythia selection:text-black">
+    <div className="bg-oceanic-noir min-h-screen text-white font-sans selection:bg-forsythia selection:text-oceanic-noir">
       <PageSpine />
       <Header />
       <main className="relative z-10">
