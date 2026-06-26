@@ -26,6 +26,7 @@
 | 8 | SVG Integration | Replace placeholders with SVGs from SVGs/ folder | SVG-01 | Completed |
 | 9 | Color Palette Integration | Global aesthetic overhaul using Oceanic Noir and Arctic Powder | COLOR-01 | Completed |
 | 10 | Three.js Hero Animation | Implement smooth WebGL neural particle animation | ANIM-01 | Completed |
+| 11 | Global Animations & Effects | Add CSS reveal hooks and hover transitions | ANIM-02 | Completed |
 
 ---
 
