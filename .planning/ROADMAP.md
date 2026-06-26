@@ -30,6 +30,7 @@
 | 12 | Global 3D Interactivity | Implement scroll/mouse parallax on global Three.js neural net | ANIM-03 | Completed |
 | 13 | Top-Level 3D Components | Embed TorusKnot demo core and Neural Feature platonic nodes | ANIM-04 | Completed |
 | 14 | Premium Motion Polish | Add film grain, SVG strokes, staggered entrances, soft zoom, and bokeh pulse | ANIM-05 | Completed |
+| 15 | Universal Mobile Responsiveness | Convert all rigid grid-cols to mobile-first responsive grids | RESP-01 | Completed |
 
 ---
 
