@@ -97,6 +97,10 @@ export default function GlobalCanvas() {
       // Parallax logic: Camera flies through Y space based on scroll
       camera.position.y = 100 - (scrollY * 0.15);
       
+      // Continuous Soft Dolly Zoom
+      camera.position.z -= 0.05;
+      if (camera.position.z < 100) camera.position.z = 300; // Reset loop smoothly if too far
+
       // Mouse Pan logic: Scene rotates gently based on mouse
       scene.rotation.y = mouseX * 0.2;
       scene.rotation.x = mouseY * 0.2;

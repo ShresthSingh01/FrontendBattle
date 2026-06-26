@@ -9,7 +9,7 @@ export default function ProductDemo() {
       {/* Ambient glow background */}
       <div 
         aria-hidden="true" 
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,200,1,0.05)_0%,transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,200,1,0.05)_0%,transparent_60%)] bokeh-pulse origin-center"
       />
 
       <DemoCoreCanvas />

@@ -1,7 +1,31 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import SectionEyebrow from '../ui/SectionEyebrow';
 
 export default function WhyUs() {
+  const svg1Ref = useRef(null);
+  const svg2Ref = useRef(null);
+
+  useEffect(() => {
+    const refs = [svg1Ref, svg2Ref];
+    const handlers = refs.map(ref => {
+      const el = ref.current;
+      if (!el) return null;
+      
+      const handleReveal = () => {
+        el.classList.add('svg-draw-animate');
+      };
+      
+      el.addEventListener('reveal', handleReveal);
+      return { el, handleReveal };
+    }).filter(Boolean);
+
+    return () => {
+      handlers.forEach(({ el, handleReveal }) => {
+        el.removeEventListener('reveal', handleReveal);
+      });
+    };
+  }, []);
+
   return (
     <section data-reveal id="why-us" className="grid md:grid-cols-2 min-h-[800px]">
       
@@ -35,7 +59,7 @@ export default function WhyUs() {
             <div>
               <div className="w-12 h-12 bg-oceanic-noir rounded-lg mb-6 flex items-center justify-center">
                 {/* Placeholder Isometric SVG: Prime Logic */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg ref={svg1Ref} data-reveal xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <g stroke="var(--forsythia)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
                     <path d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93c.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z"/>
                     <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/>
@@ -52,7 +76,7 @@ export default function WhyUs() {
             <div>
               <div className="w-12 h-12 bg-oceanic-noir rounded-lg mb-6 flex items-center justify-center">
                 {/* Placeholder Isometric SVG: Total Clarity */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg ref={svg2Ref} data-reveal xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <g stroke="var(--forsythia)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
                     <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/>
                     <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/>
