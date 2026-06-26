@@ -8,6 +8,10 @@ import CaseStudies from "./components/sections/CaseStudies";
 import ProductFeatures from "./components/sections/ProductFeatures";
 import Performance from "./components/sections/Performance";
 import Pricing from "./components/sections/Pricing";
+import WhyUs from "./components/sections/WhyUs";
+import Integrations from "./components/sections/Integrations";
+import Articles from "./components/sections/Articles";
+import Faq from "./components/sections/Faq";
 import { useReveal } from "./hooks/useReveal";
 
 function App() {
@@ -27,6 +31,10 @@ function App() {
         <ProductFeatures />
         <Performance />
         <Pricing />
+        <WhyUs />
+        <Integrations />
+        <Articles />
+        <Faq />
         {/* Future sections will go here */}
       </main>
     </div>
