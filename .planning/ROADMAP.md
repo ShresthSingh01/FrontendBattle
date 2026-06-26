@@ -19,6 +19,14 @@
 
 ---
 
+## Milestone v1.1: SVG Polish
+
+| # | Phase | Goal | Requirements | Success Criteria |
+|---|-------|------|--------------|------------------|
+| 8 | SVG Integration | Replace placeholders with SVGs from SVGs/ folder | SVG-01 | Completed |
+
+---
+
 ## Phase 1: Project Scaffold & SEO
 
 **Goal:** Initialize the project with React + Vite + Tailwind CSS, configure brand tokens, load fonts, set up complete SEO metadata.

@@ -13,8 +13,12 @@ export default function Accordion({ cards, activeIndex, setActiveIndex }) {
             className="accordion-trigger"
           >
             <span>{card.title}</span>
-            <span className={`accordion-chevron ${activeIndex === i ? 'open' : ''}`}
-              aria-hidden="true">▶</span>
+            <span className={`accordion-chevron flex items-center justify-center transform transition-transform duration-300 ${activeIndex === i ? 'rotate-180' : ''}`}
+              aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+              </svg>
+            </span>
           </button>
           <div
             id={`accordion-panel-${i}`}

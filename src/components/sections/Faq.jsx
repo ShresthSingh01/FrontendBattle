@@ -51,12 +51,10 @@ export default function Faq() {
                   >
                     <span className="text-xl opacity-50 grayscale group-hover:grayscale-0 transition-all">{faq.icon}</span>
                     <span className="font-semibold">{faq.q}</span>
-                    <div className="faq-toggle">
-                      {/* Plus icon built with CSS, rotates to X when open */}
-                      <span className="relative w-3 h-3 flex items-center justify-center">
-                        <span className="absolute w-full h-[1px] bg-current"></span>
-                        <span className="absolute h-full w-[1px] bg-current"></span>
-                      </span>
+                    <div className={`faq-toggle flex items-center justify-center transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+                      </svg>
                     </div>
                   </button>
                   <div className={`faq-answer ${isOpen ? 'open' : ''}`}>
