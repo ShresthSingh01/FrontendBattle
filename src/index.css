@@ -61,3 +61,13 @@ body {
 .play-btn::after   { top: -3px; right: -3px; border-top: 2px solid #fff; border-right: 2px solid #fff; }
 .play-btn span::before { bottom: -3px; left: -3px;  border-bottom: 2px solid #fff; border-left: 2px solid #fff; }
 .play-btn span::after  { bottom: -3px; right: -3px; border-bottom: 2px solid #fff; border-right: 2px solid #fff; }
+
+/* Pricing Controls */
+.billing-btn { color: #555; }
+.billing-btn.active { background-color: #111; color: #fff; }
+.currency-select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}

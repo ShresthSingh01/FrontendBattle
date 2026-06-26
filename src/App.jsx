@@ -6,6 +6,7 @@ import Statistics from "./components/sections/Statistics";
 import ProductDemo from "./components/sections/ProductDemo";
 import CaseStudies from "./components/sections/CaseStudies";
 import ProductFeatures from "./components/sections/ProductFeatures";
+import Pricing from "./components/sections/Pricing";
 import { useReveal } from "./hooks/useReveal";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <ProductDemo />
         <CaseStudies />
         <ProductFeatures />
+        <Pricing />
         {/* Future sections will go here */}
       </main>
     </div>
