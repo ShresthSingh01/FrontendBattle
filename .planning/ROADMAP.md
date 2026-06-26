@@ -14,7 +14,7 @@
 | 3 | Dark Sections (Neural → Case Studies) | Neural engine, statistics, product demo, case studies, product features | SECT-02–06, ANIM-02,03 | Completed |
 | 4 | Pricing Matrix Engine (Feature 1) | Multi-currency pricing with state isolation | PRICE-01–09, SECT-12 | Completed |
 | 5 | Bento Grid + Accordion (Feature 2) | Bento/accordion with context transfer + SVG charts | BENTO-01–07, SECT-07, ANIM-07, A11Y-02 | Completed |
-| 6 | Remaining Light/Dark Sections | Why Us, Integrations, Articles, FAQ | SECT-08–11 | 4 |
+| 6 | Remaining Light/Dark Sections | Why Us, Integrations, Articles, FAQ | SECT-08–11 | Completed |
 | 7 | Footer, Newsletter & Responsiveness | Footer wordmark, newsletter, mobile polish | SECT-13–14, RESP-01–04 | 6 |
 
 ---
@@ -168,7 +168,7 @@
 | 1:15 – 2:15 | Phase 4: Pricing (Feature 1) | Completed |
 | 2:15 – 3:00 | Phase 5: Bento/Accordion (Feature 2) | Completed |
 | 3:00 – 3:30 | Phase 3: Dark Sections | Completed |
-| 3:30 – 3:45 | Phase 6: Remaining Sections | 15 min |
+| 3:30 – 3:45 | Phase 6: Remaining Sections | Completed |
 | 3:45 – 4:00 | Phase 7: Footer + Responsiveness | 15 min |
 
 > **Strategy:** Prioritize Feature 1 (15 pts) and Feature 2 (10 pts) before cosmetic sections, as they carry the most scoring weight and technical risk.
