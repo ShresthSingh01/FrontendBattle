@@ -164,7 +164,7 @@
 | Time | Phase | Duration |
 |------|-------|----------|
 | 0:00 – 0:30 | Phase 1: Scaffold + SEO | 30 min |
-| 0:30 – 1:15 | Phase 2: Header, Hero, Layout | 45 min |
+| 0:30 – 1:15 | Phase 2: Header, Hero, Layout | Completed |
 | 1:15 – 2:15 | Phase 4: Pricing (Feature 1) | 60 min |
 | 2:15 – 3:00 | Phase 5: Bento/Accordion (Feature 2) | 45 min |
 | 3:00 – 3:30 | Phase 3: Dark Sections | 30 min |
