@@ -27,6 +27,7 @@
 | 9 | Color Palette Integration | Global aesthetic overhaul using Oceanic Noir and Arctic Powder | COLOR-01 | Completed |
 | 10 | Three.js Hero Animation | Implement smooth WebGL neural particle animation | ANIM-01 | Completed |
 | 11 | Global Animations & Effects | Add CSS reveal hooks and hover transitions | ANIM-02 | Completed |
+| 12 | Global 3D Interactivity | Implement scroll/mouse parallax on global Three.js neural net | ANIM-03 | Completed |
 
 ---
 

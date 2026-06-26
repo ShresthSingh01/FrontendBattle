@@ -13,6 +13,7 @@ import Integrations from "./components/sections/Integrations";
 import Articles from "./components/sections/Articles";
 import Faq from "./components/sections/Faq";
 import Footer from "./components/layout/Footer";
+import GlobalCanvas from "./components/ui/GlobalCanvas";
 import { useReveal } from "./hooks/useReveal";
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
   useReveal();
 
   return (
-    <div className="bg-oceanic-noir min-h-screen text-white font-sans selection:bg-forsythia selection:text-oceanic-noir">
+    <div className="bg-oceanic-noir min-h-screen text-white font-sans selection:bg-forsythia selection:text-oceanic-noir relative">
+      <GlobalCanvas />
       <PageSpine />
       <Header />
       <main className="relative z-10">
