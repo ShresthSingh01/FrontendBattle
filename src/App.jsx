@@ -12,6 +12,7 @@ import WhyUs from "./components/sections/WhyUs";
 import Integrations from "./components/sections/Integrations";
 import Articles from "./components/sections/Articles";
 import Faq from "./components/sections/Faq";
+import Footer from "./components/layout/Footer";
 import { useReveal } from "./hooks/useReveal";
 
 function App() {
@@ -35,8 +36,8 @@ function App() {
         <Integrations />
         <Articles />
         <Faq />
-        {/* Future sections will go here */}
       </main>
+      <Footer />
     </div>
   );
 }

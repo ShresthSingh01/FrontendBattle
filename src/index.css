@@ -279,3 +279,40 @@ body {
 .faq-answer.open { 
   max-height: 300px; 
 }
+
+/* Newsletter Section */
+.newsletter-form {
+  display: flex;
+  border: 1px solid rgba(255,255,255,0.2);
+  overflow: hidden;
+  max-width: 400px;
+}
+.newsletter-input {
+  flex: 1; padding: 0.875rem 1rem;
+  background: transparent; border: none;
+  color: #fff; font-family: var(--font-sans); font-size: 0.9rem;
+  outline: none;
+}
+.newsletter-input::placeholder { color: var(--mid-gray); }
+.newsletter-submit {
+  padding: 0.875rem 1.25rem;
+  background: transparent; border: none; border-left: 1px solid rgba(255,255,255,0.2);
+  color: #fff; cursor: pointer; display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 0.8rem;
+  transition: background var(--ease-micro);
+}
+.newsletter-submit:hover { background: rgba(255,255,255,0.05); }
+
+/* Footer Wordmark */
+.footer-wordmark {
+  font-family: var(--font-sans);
+  font-size: clamp(80px, 16vw, 200px);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.15);
+  text-transform: lowercase;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  user-select: none;
+  padding: 0 1rem;
+}
