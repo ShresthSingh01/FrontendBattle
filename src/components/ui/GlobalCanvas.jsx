@@ -89,10 +89,10 @@ export default function GlobalCanvas() {
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
 
-      // Lerp interactives for smoothness
-      scrollY += (targetScrollY - scrollY) * 0.05;
-      mouseX += (targetMouseX - mouseX) * 0.05;
-      mouseY += (targetMouseY - mouseY) * 0.05;
+      // Lerp interactives for extreme smoothness (lowered easing values)
+      scrollY += (targetScrollY - scrollY) * 0.03;
+      mouseX += (targetMouseX - mouseX) * 0.03;
+      mouseY += (targetMouseY - mouseY) * 0.03;
 
       // Parallax logic: Camera flies through Y space based on scroll
       camera.position.y = 100 - (scrollY * 0.15);
@@ -102,8 +102,8 @@ export default function GlobalCanvas() {
       if (camera.position.z < 100) camera.position.z = 300; // Reset loop smoothly if too far
 
       // Mouse Pan logic: Scene rotates gently based on mouse
-      scene.rotation.y = mouseX * 0.2;
-      scene.rotation.x = mouseY * 0.2;
+      scene.rotation.y = mouseX * 0.15;
+      scene.rotation.x = mouseY * 0.15;
 
       const positionsAttr = particles.geometry.attributes.position;
       const posArray = positionsAttr.array;

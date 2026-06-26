@@ -15,7 +15,7 @@ export function useReveal() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
     const elements = document.querySelectorAll('[data-reveal]');
     elements.forEach(el => observer.observe(el));
